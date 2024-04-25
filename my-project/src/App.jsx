@@ -18,7 +18,7 @@ export default function App() {
 
   return (
     <div className="flex w-full h-full">
-      <aside className="flex-1 h-full bg-zinc-950 bg-opacity-25 backdrop-blur-none">
+      <aside className="w-full h-full bg-zinc-950 bg-opacity-25 backdrop-blur-none">
         <div className="flex flex-col justify-center bg-blue-950 bg-opacity-25 drop-shadow-md p-8 h-full">
           <img
             src="https://img.freepik.com/fotos-premium/o-homem-da-mascara-de-corvo_264411-7628.jpg?w=1380"
@@ -66,12 +66,12 @@ export default function App() {
           </div>
         </div>
       </aside>
-      <section className="flex-1 h-full bg-zinc-950 bg-opacity-25 drop-shadow-none">
-        <div className="flex flex-col justify-center bg-blue-600 bg-opacity-25 drop-shadow-md p-8 h-full">
+      <section className="w-full h-full bg-blue-600 bg-opacity-25 drop-shadow-none">
+        <div className="flex flex-col justify-center  bg-opacity-25 drop-shadow-md p-8">
           <div className="mt-2">
             <h1 className="text-5xl text-amber-400">CURSOS<br/> COMPLEMENTARES:</h1>
             <hr/>
-            <ul className="mt-5 text-4xl text-white list-disc">
+            <ul className="mt-5 text-4xl h-full text-white list-disc">
               <li className="p-2 ml-16 hover:text-blue-700" onClick={() => openModal("Figure/Introdução a Banco de DadosSQL.png")}>Introdução a Banco de Dados Relacionais (SQL)</li>
               <li className="p-2 ml-16 hover:text-blue-700" onClick={() => openModal("Figure/Introdução a Banco de Dados.png")}>Introdução a Banco de Dados NoSQL</li>
               <li className="p-2 ml-16 hover:text-blue-700" onClick={() => openModal("Figure/Primeiros Passos em SQL e NoSQL.png")}>Primeiros Passos em SQL e NoSQL</li>
@@ -108,6 +108,8 @@ export default function App() {
           </div>
         </div>
       </section>
+
+
       {showModal && (
         <div className="modal-container">
           <div className="modal"> 
