@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { EnvelopeSimple, LinkedinLogo, GitlabLogo, X } from '@phosphor-icons/react';
+import Menu from './menu';
 import './App.css';
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col lg:flex-row">
+      <Menu />
       <aside className="lg:w-1/2 bg-zinc-950 bg-opacity-25 backdrop-blur-none p-8">
         <div className="flex flex-col justify-center items-center lg:items-start">
            <img
