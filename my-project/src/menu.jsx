@@ -9,10 +9,14 @@ export default function Project() {
 
   useEffect(() => {
     function updateMenuPosition() {
-      const buttonRect = document.getElementById('menu-button').getBoundingClientRect();
-      setMenuPosition({ top: buttonRect.bottom, left: buttonRect.left });
+      const button = document.getElementById('menu-button');
+      if (button) {
+        const buttonRect = button.getBoundingClientRect();
+        setMenuPosition({ top: buttonRect.bottom, left: buttonRect.left });
+      }
     }
 
+    updateMenuPosition(); // Atualizar posição inicialmente
     window.addEventListener('resize', updateMenuPosition);
     return () => {
       window.removeEventListener('resize', updateMenuPosition);
@@ -38,8 +42,8 @@ export default function Project() {
 
   return (
     <Draggable>
-      <div className="relative">
-        <button id="menu-button" onClick={toggleMenu} className="focus:outline-none">
+      <div className="relative h-fit w-fit">
+        <button id="menu-button" onClick={toggleMenu} className="focus:outline-none" aria-expanded={menuOpen} aria-haspopup="true">
           <div className="rounded-full bg-white p-1">
             <DotsThreeCircle size={32} />
           </div>
@@ -47,7 +51,7 @@ export default function Project() {
         {menuOpen && (
           <div ref={menuRef} className="absolute bg-white rounded shadow-md" style={{ top: menuPosition.top, left: menuPosition.left }}>
             <a href="#home" className="block p-2 hover:bg-gray-100">Home</a>
-            <a href="#download" className="block p-2 hover:bg-gray-100">Download</a>
+            <a href="CV.pdf" className="block p-2 hover:bg-gray-100" download="CV.pdf">Download</a>
           </div>
         )}
       </div>
