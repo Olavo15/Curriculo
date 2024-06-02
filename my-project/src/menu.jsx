@@ -50,7 +50,7 @@ export default function Project() {
         </button>
         {menuOpen && (
           <div ref={menuRef} className="absolute bg-white rounded shadow-md" style={{ top: menuPosition.top, left: menuPosition.left }}>
-            <a href="#home" className="block p-2 hover:bg-gray-100">Home</a>
+            <a href="https://portfolio-plum-rho-37.vercel.app/" className="block p-2 hover:bg-gray-100">Home</a>
             <a href="CV.pdf" className="block p-2 hover:bg-gray-100" download="CV.pdf">Download</a>
           </div>
         )}
