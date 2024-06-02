@@ -12,16 +12,31 @@ export default function Project() {
       const button = document.getElementById('menu-button');
       if (button) {
         const buttonRect = button.getBoundingClientRect();
-        setMenuPosition({ top: buttonRect.bottom, left: buttonRect.left });
+        const menuHeight = menuRef.current ? menuRef.current.offsetHeight : 0;
+        const menuWidth = menuRef.current ? menuRef.current.offsetWidth : 0;
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
+
+        let top = buttonRect.bottom;
+        let left = buttonRect.left;
+
+        if (top + menuHeight > viewportHeight) {
+          top = buttonRect.top - menuHeight; // Position above the button if it overflows
+        }
+        if (left + menuWidth > viewportWidth) {
+          left = viewportWidth - menuWidth; // Adjust to fit within viewport width
+        }
+
+        setMenuPosition({ top, left });
       }
     }
 
-    updateMenuPosition(); // Atualizar posição inicialmente
+    updateMenuPosition();
     window.addEventListener('resize', updateMenuPosition);
     return () => {
       window.removeEventListener('resize', updateMenuPosition);
     };
-  }, []);
+  }, [menuOpen]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -43,15 +58,38 @@ export default function Project() {
   return (
     <Draggable>
       <div className="relative h-fit w-fit">
-        <button id="menu-button" onClick={toggleMenu} className="focus:outline-none" aria-expanded={menuOpen} aria-haspopup="true">
+        <button
+          id="menu-button"
+          onClick={toggleMenu}
+          className="focus:outline-none"
+          aria-expanded={menuOpen}
+          aria-haspopup="true"
+          aria-controls="dropdown-menu"
+        >
           <div className="rounded-full bg-white p-1">
             <DotsThreeCircle size={32} />
           </div>
         </button>
         {menuOpen && (
-          <div ref={menuRef} className="absolute bg-white rounded shadow-md" style={{ top: menuPosition.top, left: menuPosition.left }}>
-            <a href="https://portfolio-plum-rho-37.vercel.app/" className="block p-2 hover:bg-gray-100">Home</a>
-            <a href="CV.pdf" className="block p-2 hover:bg-gray-100" download="CV.pdf">Download</a>
+          <div
+            id="dropdown-menu"
+            ref={menuRef}
+            className="absolute bg-white rounded shadow-md z-50"
+            style={{ top: menuPosition.top, left: menuPosition.left }}
+          >
+            <a
+              href="https://portfolio-plum-rho-37.vercel.app/"
+              className="block p-2 hover:bg-gray-100"
+            >
+              Home
+            </a>
+            <a
+              href="CV.pdf"
+              className="block p-2 hover:bg-gray-100"
+              download="CV.pdf"
+            >
+              Download
+            </a>
           </div>
         )}
       </div>
