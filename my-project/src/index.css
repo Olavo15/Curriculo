@@ -6,3 +6,41 @@ body{
   background-color: black;
   
 }
+/* Custom CSS for responsiveness */
+
+@media (max-width: 768px) {
+  /* Adjustments for mobile devices */
+  #dropdown-menu {
+    width: 100%;
+    left: 0 !important; /* Ensure it stays within the viewport */
+  }
+
+  #menu-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Adjustments for tablets and larger devices */
+  #dropdown-menu {
+    min-width: 200px; /* Ensure a minimum width */
+  }
+}
+
+/* General styles */
+#menu-button {
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+#dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
