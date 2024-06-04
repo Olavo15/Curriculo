@@ -96,22 +96,19 @@ export default function App() {
           <div className="mt-14 text-center lg:text-left">
             <h1 className="text-3xl lg:text-5xl text-amber-400">HABILIDADES:</h1>
             <hr/>
-            <ul className="mt-5 text-4xl text-white list-disc">
-              <li className="ml-16 p-1">Informática básica</li>
+            <ul className="mt-5 text-4xl text-white list-disc">              
               <li className="ml-16 p-1">Linux</li>
-              <li className="ml-16 p-1">Kali</li>
               <li className="ml-16 p-1">Windows</li>
-              <li className="ml-16 p-1">Word</li>
+              <li className="ml-16 p-1">Pacote office</li>
               <li className="ml-16 p-1">Power Bi</li>
               <li className="ml-16 p-1">Git</li>
-              <li className="ml-16 p-1">VSCode</li>
               <li className="ml-16 p-1">Figma</li>
               <li className="ml-16 p-1">React</li>
+              <li className="ml-16 p-1">JavaScript</li>
               <li className="ml-16 p-1">Typescript</li>
-              <li className="ml-16 p-1">Tailwindcss</li>
               <li className="ml-16 p-1">HTML5</li>
               <li className="ml-16 p-1">CSS3</li>
-              <li className="ml-16 p-1">JavaScript</li>
+              <li className="ml-16 p-1">Tailwindcss</li>
               <li className="ml-16 p-1">Python</li>
               <li className="ml-16 p-1">SQL</li>
               <li className="ml-16 p-1">NoSQL</li>
