@@ -91,6 +91,7 @@ export default function App() {
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/QDIYJWJL.pdf")}>Conhecendo a Linguagem de Programação Python</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/HJJWX1CD.pdf")}>Princípios de Desenvolvimento de Software Colaborativo</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/RHFN1M0K.pdf")}>Python Essencial e Desenvolvimento Colaborativo com Git</li>
+              <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/BBWQYTZN.pdf")}>Príncipios da Cibersegurança</li>
             </ul>
           </div>
           <div className="mt-14 text-center lg:text-left">
