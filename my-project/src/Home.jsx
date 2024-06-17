@@ -82,6 +82,8 @@ export default function App() {
             <hr />
             <ul className="mt-5 text-xl lg:text-4xl text-white">
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/MW9DBXQM.pdf")}>Python Data Analytics</li>
+              <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/7UXVWUZN.pdf")}>Santander Bootcamp Cibersegurança</li>
+              <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/DB5DXKJ8.pdf")}>Formação Cybersecurity Specialist</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/SMY0H5IP.pdf")}>Introdução a Banco de Dados NoSQL</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/2AJFY45C.pdf")}>Introdução a Análise de Dados com SQL (SQL)</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/2V3MOU4M.pdf")}>Introdução a Banco de Dados Relacionais (SQL)</li>
