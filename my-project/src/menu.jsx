@@ -95,9 +95,9 @@ export default function Project() {
             Home
           </a>
           <a
-            href="src/CV.pdf"
+            href="src/Cv.pdf"
             className="block p-2 hover:bg-gray-100"
-            download="CV.pdf"
+            download="Curriculo_Olavo.pdf"
           >
             Download
           </a>
