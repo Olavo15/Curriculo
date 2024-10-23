@@ -80,7 +80,7 @@ export default function App() {
           <div className="mt-2 text-center lg:text-left">
             <h1 className="text-3xl lg:text-5xl text-amber-400">CURSOS<br /> COMPLEMENTARES:</h1>
             <hr />
-            <ul className="mt-5 text-xl lg:text-4xl text-white">
+            <ul className="mt-5 text-sl lg:text-4xl text-white">
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/MW9DBXQM.pdf")}>Python Data Analytics</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/7UXVWUZN.pdf")}>Santander Bootcamp Cibersegurança</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/DB5DXKJ8.pdf")}>Formação Cybersecurity Specialist</li>
@@ -95,6 +95,7 @@ export default function App() {
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/RHFN1M0K.pdf")}>Python Essencial e Desenvolvimento Colaborativo com Git</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/BBWQYTZN.pdf")}>Príncipios da Cibersegurança</li>
               <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/I6GPNMBY.pdf")}>Fundamentos de Cibersegurança</li>
+              <li className="p-2 hover:text-blue-700" onClick={() => openModal("https://hermes.dio.me/certificates/AWYQXIUI.pdf")}>Aceleração Internacional - Creating a Secure REST API with Python and Django</li>
             </ul>
           </div>
           <div className="mt-14 text-center lg:text-left">
